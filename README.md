@@ -1,4 +1,13 @@
-# JWT Decoder
+# Claude-test Repository
+
+This repository contains two Python applications:
+
+1. **JWT Decoder** - A command-line tool to decode and verify JSON Web Tokens
+2. **Brainfuck Hello World** - A Brainfuck program that prints "Hello World!" with interpreter
+
+---
+
+## JWT Decoder
 
 A simple and powerful command-line Python application to decode and verify JSON Web Tokens (JWT).
 
@@ -210,3 +219,81 @@ This project is open source and available under the MIT License.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+## Brainfuck Hello World
+
+A classic "Hello World!" program written in the esoteric programming language Brainfuck, along with a Python interpreter to execute it.
+
+### What is Brainfuck?
+
+Brainfuck is a minimalist esoteric programming language created by Urban Müller in 1993. Despite having only 8 commands, it is Turing-complete. The language operates on an array of memory cells (tape) and uses a pointer to navigate and modify these cells.
+
+### Brainfuck Commands
+
+- `>` - Move pointer right
+- `<` - Move pointer left
+- `+` - Increment byte at pointer
+- `-` - Decrement byte at pointer
+- `.` - Output byte at pointer as ASCII character
+- `,` - Input one byte and store at pointer
+- `[` - Jump forward past matching `]` if byte at pointer is zero
+- `]` - Jump back to matching `[` if byte at pointer is nonzero
+
+### Files
+
+- **hello_world.bf** - The Brainfuck source code that prints "Hello World!"
+- **brainfuck_interpreter.py** - A Python interpreter to execute Brainfuck programs
+
+### Running the Hello World Program
+
+```bash
+python brainfuck_interpreter.py hello_world.bf
+```
+
+Output:
+```
+Hello World!
+```
+
+### Using the Brainfuck Interpreter
+
+The interpreter can run any Brainfuck program:
+
+```bash
+python brainfuck_interpreter.py <your-program.bf>
+```
+
+### Features of the Interpreter
+
+- **30,000 memory cells** (expandable automatically)
+- **8-bit cells** with wrapping (0-255)
+- **Bracket matching** for loop validation
+- **Error handling** for malformed programs
+- **Comment support** (ignores non-Brainfuck characters)
+
+### Example Programs
+
+You can write your own Brainfuck programs! Here are some simple examples:
+
+**Print 'A' (ASCII 65):**
+```brainfuck
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>-.
+```
+
+**Print numbers 0-9:**
+```brainfuck
+++++[>++++++++++<-]>[>+>+<<-]>>[<<+>>-]<[>+.<-]
+```
+
+### The Hello World Code Explained
+
+The `hello_world.bf` program uses nested loops to efficiently generate the ASCII values for each character in "Hello World!" and then prints them. The algorithm minimizes the number of operations by using multiplication through loops rather than incrementing each character value individually.
+
+### Fun Facts
+
+- Brainfuck programs are notoriously difficult to read and write
+- The language is designed to challenge programmers, not for practical use
+- Despite its simplicity, you can write complex programs including interpreters for other languages
+- The name is often sanitized to "Brainf*ck" or "BF" in formal contexts
